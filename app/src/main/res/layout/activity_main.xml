@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="위드 코로나 단계 : 1단계"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_margin="10dp" />
+
+    <Button
+        android:id="@+id/withCovid"
+        android:onClick="withCorona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_color_drawable"
+        android:text="위드 코로나 안내"
+        android:textColor="#000000" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="wrap_content"
+            android:layout_height="133dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp" />
+
+    </FrameLayout>
+
+    <!--        <com.naver.maps.map.MapView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="542dp"-->
+    <!--        android:layout_below="@+id/spinner"-->
+    <!--        android:layout_marginTop="0dp">-->
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.naver.maps.map.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="578dp">
+
+        <com.naver.maps.map.widget.LocationButtonView
+            android:id="@+id/myLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+        <!--                    android:layout_alignParentLeft="true" />-->
+
+        <com.naver.maps.map.widget.ZoomControlView
+            android:id="@+id/itsZoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myLocation"
+            android:layout_gravity="right" />
+    </fragment>
+    <!--                    android:layout_alignParentLeft="true"/>-->
+
+    <!--    </com.naver.maps.map.MapView>-->
+
+</LinearLayout>
