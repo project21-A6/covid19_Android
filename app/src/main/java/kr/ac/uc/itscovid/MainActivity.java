@@ -159,7 +159,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 //지역 비교로 동일한 데이터 불러옴옴
                         )
                 );
-                Toast.makeText(parent.getContext(), "선택된 지역은 "+parent.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
                 if(mNavermap!=null){
                     goLocation(parent.getItemAtPosition(position).toString());
                 }
@@ -408,7 +407,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 break;
 
             default:
-                Toast.makeText(getApplicationContext(), "선택된 지역은 "+ click_location +" 입니다.", Toast.LENGTH_SHORT).show();
                 break;
         }
 

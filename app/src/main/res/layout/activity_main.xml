@@ -38,12 +38,12 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="93dp">
 
         <ListView
             android:id="@+id/listview"
             android:layout_width="wrap_content"
-            android:layout_height="133dp"
+            android:layout_height="68dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
@@ -62,7 +62,8 @@
         android:id="@+id/map"
         android:name="com.naver.maps.map.MapFragment"
         android:layout_width="match_parent"
-        android:layout_height="578dp">
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
 
         <com.naver.maps.map.widget.LocationButtonView
             android:id="@+id/myLocation"
